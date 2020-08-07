@@ -2,30 +2,14 @@
   <header>
     <nav class="navbar">
       <router-link class="navbar-brand" to="/">
-        <img
-          src="https://p0.ssl.qhimg.com/d/inn/5c264e763dda/cat-charts-vue.png"
-          height="40"
-          alt="qchart"
-        >
+        <img src="https://p1.ssl.qhimg.com/t01dca19205996c8a4c.png" height="40" alt="qchart">
       </router-link>
 
       <button class="navbar-toggler" @click="toggleShowMenu">
         <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 30 30"
-            width="30"
-            height="30"
-            focusable="false"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
             <title>Menu</title>
-            <path
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
-              d="M4 7h22M4 15h22M4 23h22"
-            ></path>
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path>
           </svg>
         </span>
       </button>
@@ -62,20 +46,20 @@ export default {
     Search
   },
 
-  data() {
+  data () {
     return {
       showMenu: false
     }
   },
 
   watch: {
-    $route() {
+    $route () {
       this.showMenu = false
     }
   },
 
   methods: {
-    toggleShowMenu() {
+    toggleShowMenu () {
       this.showMenu = !this.showMenu
     }
   }
@@ -166,8 +150,8 @@ header {
 
       button {
         display: block;
-        left:15px;
-        right:auto;
+        left: 15px;
+        right: auto;
       }
 
       > div {
