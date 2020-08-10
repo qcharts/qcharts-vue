@@ -1,7 +1,7 @@
 {
   "name": "qcharts-vue",
   "version": "1.0.1",
-  "description": "A visulization library based on spritejs and sprite-extend-shapes",
+  "description": "A visulization library based on spritejs",
   "main": "lib/index.js",
   "browser": "lib/index.js",
   "scripts": {
