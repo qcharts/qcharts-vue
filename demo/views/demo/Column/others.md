@@ -6,13 +6,13 @@
 
 ```html
 <template>
-  <s-chart :data="data" :data-fields="dataFields">
-    <s-bar :attrs="attrs" />
-    <s-axis :attrs="{orient:'left'}" />
-    <s-axis :attrs="{orient:'bottom'}" />
-    <s-legend :attrs="{align: ['center', 'bottom']}" />
-    <s-tooltip :attrs="tooltipAttrs" />
-  </s-chart>
+  <q-chart :data="data" :data-fields="dataFields">
+    <q-bar :attrs="attrs" />
+    <q-axis :attrs="{orient:'left'}" />
+    <q-axis :attrs="{orient:'bottom'}" />
+    <q-legend :attrs="{align: ['center', 'bottom']}" />
+    <q-tooltip :attrs="tooltipAttrs" />
+  </q-chart>
 </template>
 <script>
   export default {
@@ -106,13 +106,13 @@
 
 ```html
 <template>
-  <s-chart :data="data" :data-fields="dataFields">
-    <s-bar />
-    <s-axis :attrs="{orient:'left'}" />
-    <s-axis :attrs="{orient:'bottom'}" />
-    <s-legend :attrs="{align: ['center', 'bottom']}" />
-    <s-tooltip :attrs="tooltipAttrs" />
-  </s-chart>
+  <q-chart :data="data" :data-fields="dataFields">
+    <q-bar />
+    <q-axis :attrs="{orient:'left'}" />
+    <q-axis :attrs="{orient:'bottom'}" />
+    <q-legend :attrs="{align: ['center', 'bottom']}" />
+    <q-tooltip :attrs="tooltipAttrs" />
+  </q-chart>
 </template>
 <script>
   let num = 0

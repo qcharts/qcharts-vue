@@ -5,15 +5,15 @@ const common = require('./webpack.conf.common')
 
 module.exports = merge(common, {
   entry: {
-    'app': path.resolve(__dirname, '../demo/'),
-    'cat-charts': path.resolve(__dirname, '../src/')
+    app: path.resolve(__dirname, '../demo/'),
+    'q-charts': path.resolve(__dirname, '../src/')
   },
   output: {
     path: path.resolve(__dirname, '../docs'),
     filename: '[name].js',
-    library: 'CatChartsVue',
+    library: 'qChartsVue',
     libraryTarget: 'umd',
-    chunkFilename: '[name].[hash:7].js',
+    chunkFilename: '[name].[hash:7].js'
   },
   module: {
     rules: [

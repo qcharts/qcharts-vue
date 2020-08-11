@@ -1,7 +1,7 @@
 <script>
 import Base from '../base.vue'
 export default {
-  name: 's-axis',
+  name: 'q-radar',
   extends: Base
 }
 </script>

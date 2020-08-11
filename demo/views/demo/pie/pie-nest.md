@@ -4,27 +4,27 @@
 
 ```html
 <template>
-  <s-chart :data="pieData" :data-fields="dataFields">
-    <s-pie
+  <q-chart :data="pieData" :data-fields="dataFields">
+    <q-pie
       :attrs="attrs"
       :rows="rows1"
       :color="pieColor"
       :css-text="textStyle"
     />
-    <s-pie
+    <q-pie
       :attrs="attrs2"
       :rows="rows2"
       :color="pieColor2"
       :css-guideline="true"
       :css-guideText="{fontSize: '12px'}"
     />
-    <s-legend
+    <q-legend
       :color="legendColor"
       :attrs="legendAttrs"
       :css-icon="legendIconStyle"
       :css-text="legendTextStyle"
     />
-  </s-chart>
+  </q-chart>
 </template>
 <script>
   export default {

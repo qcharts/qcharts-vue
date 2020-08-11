@@ -1,7 +1,7 @@
 <script>
 import Base from '../base.vue'
 export default {
-  name: 's-polarBar',
+  name: 'q-polarBar',
   extends: Base
 }
 </script>

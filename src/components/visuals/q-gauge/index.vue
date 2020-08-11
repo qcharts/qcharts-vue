@@ -1,7 +1,7 @@
 <script>
 import Base from '../base.vue'
 export default {
-  name: 's-gauge',
+  name: 'q-gauge',
   extends: Base
 }
 </script>

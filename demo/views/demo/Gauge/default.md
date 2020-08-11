@@ -4,9 +4,9 @@
 
 ```html
 <template>
-  <s-chart :data="data" :data-fields="dataFields">
-    <s-gauge :attrs="attrs" :css-title="{fontSize:48}" />
-  </s-chart>
+  <q-chart :data="data" :data-fields="dataFields">
+    <q-gauge :attrs="attrs" :css-title="{fontSize:48}" />
+  </q-chart>
 </template>
 <script>
   export default {

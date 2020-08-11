@@ -1,7 +1,7 @@
 <script>
 import Base from '../base.vue'
 export default {
-  name: 's-bar',
+  name: 'q-tooltip',
   extends: Base
 }
 </script>

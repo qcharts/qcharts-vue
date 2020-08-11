@@ -7,13 +7,13 @@ const common = require('./webpack.conf.common')
 
 module.exports = merge(common, {
   entry: {
-    'app': path.resolve(__dirname, '../demo/'),
-    'cat-charts': path.resolve(__dirname, '../src/')
+    app: path.resolve(__dirname, '../demo/'),
+    'q-charts': path.resolve(__dirname, '../src/')
   },
   output: {
     path: path.join(__dirname, '../lib'),
     filename: '[name].js',
-    library: 'CatChartsVue',
+    library: 'qChartsVue',
     libraryTarget: 'umd'
   },
   devServer: {
@@ -24,8 +24,8 @@ module.exports = merge(common, {
     quiet: true,
     open: true,
     watchOptions: {
-      aggregateTimeout: 300,
-      poll: 1
+      aggregateTimeout: 1000,
+      poll: 3000
     }
   },
   devtool: 'source-map',

@@ -4,8 +4,8 @@
 
 ```html
 <template>
-  <s-chart :data="data" :data-fields="dataFields">
-    <s-bar
+  <q-chart :data="data" :data-fields="dataFields">
+    <q-bar
       :css-text="text"
       :css-text:hover="textHover"
       :css-pillar="pillar"
@@ -13,10 +13,10 @@
       :css-backgroundpillar="backgroundpillar"
       :css-backgroundpillar:hover="backgroundpillarHover"
     />
-    <s-axis :attrs="{orient:'left'}" />
-    <s-axis :attrs="{orient:'bottom'}" />
-    <s-tooltip :attrs="tooltipAttrs" />
-  </s-chart>
+    <q-axis :attrs="{orient:'left'}" />
+    <q-axis :attrs="{orient:'bottom'}" />
+    <q-tooltip :attrs="tooltipAttrs" />
+  </q-chart>
 </template>
 <script>
   export default {
@@ -107,12 +107,12 @@
 
 ```html
 <template>
-  <s-chart :data="data" :data-fields="dataFields">
-    <s-bar :attrs="attrs" :css-text="true" />
-    <s-axis :attrs="{orient:'left'}" />
-    <s-axis :attrs="{orient:'bottom'}" />
-    <s-legend :attrs="{align: ['center', 'bottom']}" />
-    <s-tooltip :attrs="tooltipAttrs" />
+  <q-chart :data="data" :data-fields="dataFields">
+    <q-bar :attrs="attrs" :css-text="true" />
+    <q-axis :attrs="{orient:'left'}" />
+    <q-axis :attrs="{orient:'bottom'}" />
+    <q-legend :attrs="{align: ['center', 'bottom']}" />
+    <q-tooltip :attrs="tooltipAttrs" />
   </s-chart>
 </template>
 <script>

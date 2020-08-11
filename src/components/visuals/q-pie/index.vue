@@ -1,7 +1,7 @@
 <script>
 import Base from '../base.vue'
 export default {
-  name: 's-funnel',
+  name: 'q-pie',
   extends: Base
 }
 </script>

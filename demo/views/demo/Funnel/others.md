@@ -4,12 +4,22 @@
 
 ```html
 <template>
-  <s-chart :data="data" :data-fields="dataFields">
-    <s-funnel :attrs="rightAttrs" :css-guideLine="true" :css-guideText="true" :css-polygon="{ strokeColor:'transparent'}"/>
-    <s-funnel :attrs="leftAttrs" :css-guideLine="true" :css-guideText="true" :css-polygon="{ strokeColor:'transparent'}"/>
-    <s-tooltip :attrs="tooltipAttrs" />
-    <s-legend :attrs="{align: ['center', 'bottom']}" />
-  </s-chart>
+  <q-chart :data="data" :data-fields="dataFields">
+    <q-funnel
+      :attrs="rightAttrs"
+      :css-guideLine="true"
+      :css-guideText="true"
+      :css-polygon="{ strokeColor:'transparent'}"
+    />
+    <q-funnel
+      :attrs="leftAttrs"
+      :css-guideLine="true"
+      :css-guideText="true"
+      :css-polygon="{ strokeColor:'transparent'}"
+    />
+    <q-tooltip :attrs="tooltipAttrs" />
+    <q-legend :attrs="{align: ['center', 'bottom']}" />
+  </q-chart>
 </template>
 <script>
   export default {

@@ -4,10 +4,10 @@
 
 ```html
 <template>
-  <s-chart :data="radarData" :data-fields="dataFields">
-    <s-radar :css-point="false" />
-    <s-legend :attrs="{align: ['center', 'bottom']}" />
-  </s-chart>
+  <q-chart :data="radarData" :data-fields="dataFields">
+    <q-radar :css-point="false" />
+    <q-legend :attrs="{align: ['center', 'bottom']}" />
+  </q-chart>
 </template>
 <script>
   export default {

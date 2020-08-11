@@ -6,23 +6,23 @@
 
 ```html
 <template>
-  <s-chart :data="lineData" :data-fields="dataFields">
-    <s-line
+  <q-chart :data="lineData" :data-fields="dataFields">
+    <q-line
       :attrs="attrs"
       :data="lineData"
       :data-fields="dataFields"
       :css-point="pointStyle"
       :css-point:hover="pointHoverStyle"
     />
-    <s-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
-    <s-axis :attrs="{orient:'bottom'}" />
-    <s-legend
+    <q-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
+    <q-axis :attrs="{orient:'bottom'}" />
+    <q-legend
       :attrs="{align: ['center', 'bottom']}"
       :css-icon="{borderRadius:10}"
       :css-text="{fontSize:12}"
     />
-    <s-tooltip :attrs="tooltipAttrs" />
-  </s-chart>
+    <q-tooltip :attrs="tooltipAttrs" />
+  </q-chart>
 </template>
 <script>
   export default {
@@ -51,7 +51,7 @@
           value: 'sales',
           text: 'product'
         },
-        pointStyle: { pointType: 'star', size: 8,strokeColor:'transparent' },
+        pointStyle: { pointType: 'star', size: 8, strokeColor: 'transparent' },
         pointHoverStyle: function(attrs, data, i, j) {
           //设置symbol样式
           if (data.sales > 60) {
@@ -76,13 +76,13 @@
 
 ```html
 <template>
-  <s-chart :data="data" :data-fields="dataFields">
-    <s-line :attrs="{smooth:true}" :css-point="{strokeColor:'transparent'}"/>
-    <s-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
-    <s-axis :attrs="{orient:'bottom'}" />
-    <s-legend :attrs="{align: ['center', 'bottom']}" />
-    <s-tooltip :attrs="tooltipAttrs" />
-  </s-chart>
+  <q-chart :data="data" :data-fields="dataFields">
+    <q-line :attrs="{smooth:true}" :css-point="{strokeColor:'transparent'}" />
+    <q-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
+    <q-axis :attrs="{orient:'bottom'}" />
+    <q-legend :attrs="{align: ['center', 'bottom']}" />
+    <q-tooltip :attrs="tooltipAttrs" />
+  </q-chart>
 </template>
 <script>
   let num = 0
@@ -152,14 +152,14 @@
 
 ```html
 <template>
-  <s-chart :data="lineData" :data-fields="dataFields">
-    <s-bar :attrs="{mouseDisabled:true}" />
-    <s-line :attrs="{axisGap:true}" :css-point="pointStyle" />
-    <s-axis :attrs="{orient:'left'}" />
-    <s-axis :attrs="{orient:'bottom'}" />
-    <s-legend :attrs="{align: ['center', 'bottom']}" />
-    <s-tooltip :attrs="tooltipAttrs" />
-  </s-chart>
+  <q-chart :data="lineData" :data-fields="dataFields">
+    <q-bar :attrs="{mouseDisabled:true}" />
+    <q-line :attrs="{axisGap:true}" :css-point="pointStyle" />
+    <q-axis :attrs="{orient:'left'}" />
+    <q-axis :attrs="{orient:'bottom'}" />
+    <q-legend :attrs="{align: ['center', 'bottom']}" />
+    <q-tooltip :attrs="tooltipAttrs" />
+  </q-chart>
 </template>
 <script>
   export default {

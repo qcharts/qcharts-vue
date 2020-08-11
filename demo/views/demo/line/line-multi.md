@@ -4,21 +4,21 @@
 
 ```html
 <template>
-  <s-chart :data="lineData" :data-fields="dataFields">
-    <s-line
+  <q-chart :data="lineData" :data-fields="dataFields">
+    <q-line
       :data="lineData"
       :data-fields="dataFields"
       :css-point="pointStyle"
     />
-    <s-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
-    <s-axis :attrs="{orient:'bottom'}" />
-    <s-legend
+    <q-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
+    <q-axis :attrs="{orient:'bottom'}" />
+    <q-legend
       :attrs="{align: ['center', 'bottom']}"
       :css-icon="{borderRadius:10}"
       :css-text="{fontSize:12}"
     />
-    <s-tooltip :attrs="tooltipAttrs" />
-  </s-chart>
+    <q-tooltip :attrs="tooltipAttrs" />
+  </q-chart>
 </template>
 <script>
   export default {

@@ -4,15 +4,15 @@
 
 ```html
 <template>
-  <s-chart :data="pieData" :data-fields="dataFields">
-    <s-pie
+  <q-chart :data="pieData" :data-fields="dataFields">
+    <q-pie
       :attrs="attrs"
       :css-guideline="true"
       :css-guideText="true"
       :css-sector="{lineWidth: 1, strokeColor: '#fff'}"
     />
-    <s-legend :attrs="legendAttrs" />
-  </s-chart>
+    <q-legend :attrs="legendAttrs" />
+  </q-chart>
 </template>
 <script>
   export default {

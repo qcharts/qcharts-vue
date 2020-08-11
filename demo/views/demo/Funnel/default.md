@@ -4,17 +4,17 @@
 
 ```html
 <template>
-  <s-chart :data="data" :data-fields="dataFields">
-    <s-funnel
+  <q-chart :data="data" :data-fields="dataFields">
+    <q-funnel
       :attrs="attrs"
       :css-guideLine="true"
       :css-guideText="true"
       :css-polygon:hover="{opacity:0.5}"
       :css-polygon="{ strokeColor:'transparent'}"
     />
-    <s-tooltip :attrs="tooltipAttrs" />
-    <s-legend :attrs="{align: ['center', 'bottom']}" />
-  </s-chart>
+    <q-tooltip :attrs="tooltipAttrs" />
+    <q-legend :attrs="{align: ['center', 'bottom']}" />
+  </q-chart>
 </template>
 <script>
   export default {

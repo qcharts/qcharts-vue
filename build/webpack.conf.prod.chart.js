@@ -20,7 +20,7 @@ module.exports = merge(common, {
   output: {
     path: path.join(__dirname, '../lib'),
     filename: '[name].js',
-    library: 'CatChartsVue',
+    library: 'qChartsVue',
     libraryTarget: 'umd'
   },
   plugins: [new uglify(), new BundleAnalyzer()]

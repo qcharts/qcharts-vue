@@ -1,7 +1,7 @@
 <script>
 import Base from '../base.vue'
 export default {
-  name: 's-legend',
+  name: 'q-scatter',
   extends: Base
 }
 </script>

@@ -14,15 +14,15 @@ import {
 import { bus } from '../../utils'
 // import global from '../global.vue'
 const visualObject = {
-  's-line': Line,
-  's-bar': Bar,
-  's-pie': Pie,
-  's-radar': Radar,
-  's-area': Area,
-  's-funnel': Funnel,
-  's-scatter': Scatter,
-  's-gauge': Gauge,
-  's-polarBar': PolarBar
+  'q-line': Line,
+  'q-bar': Bar,
+  'q-pie': Pie,
+  'q-radar': Radar,
+  'q-area': Area,
+  'q-funnel': Funnel,
+  'q-scatter': Scatter,
+  'q-gauge': Gauge,
+  'q-polarBar': PolarBar
 }
 /**
  * 所有组件的基类
@@ -57,7 +57,7 @@ export default {
 
       this.visual = new Shape(this.attrs)
       // this.id && this.visual.id=1
-      this.visual.color(this.color)
+      // this.visual.color(this.color)
       Object.keys(this.$attrs).forEach(element => {
         if (element.indexOf('css-') === -1) {
           return

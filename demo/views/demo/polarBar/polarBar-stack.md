@@ -4,11 +4,11 @@
 
 ```html
 <template>
-  <s-chart :data="barData" :data-fields="dataFields">
-    <s-polarBar :attrs="attrs" />
-    <s-tooltip :attrs="tooltipAttrs" />
-    <s-legend :attrs="{align: ['center', 'bottom']}" />
-  </s-chart>
+  <q-chart :data="barData" :data-fields="dataFields">
+    <q-polarBar :attrs="attrs" />
+    <q-tooltip :attrs="tooltipAttrs" />
+    <q-legend :attrs="{align: ['center', 'bottom']}" />
+  </q-chart>
 </template>
 <script>
   export default {

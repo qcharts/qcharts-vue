@@ -3,9 +3,9 @@
 import { Axis, Legend, Tooltip } from '@qcharts/core'
 import { bus } from '../../utils'
 const pluginObject = {
-  's-axis': Axis,
-  's-legend': Legend,
-  's-tooltip': Tooltip
+  'q-axis': Axis,
+  'q-legend': Legend,
+  'q-tooltip': Tooltip
 }
 /**
  * 所有组件的基类
@@ -37,7 +37,7 @@ export default {
       const Plug = pluginObject[this.$vnode.componentOptions.tag]
 
       this.plugin = new Plug(this.attrs)
-      this.plugin.color(this.color)
+      // this.plugin.color(this.color)
       Object.keys(this.$attrs).forEach(element => {
         if (element.indexOf('css-') === -1) {
           return

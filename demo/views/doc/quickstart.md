@@ -9,7 +9,7 @@ CatChartsVue 是一个基于 <a target="_blank" href="https://www.spritejs.com">
 1.通过 npm 获取 CatChartsVue，我们提供了 CatChartsVue npm 包，通过下面的命令即可完成安装，Demo：<a target="_blank" href="https://github.com/yaotaiyang/cat-charts-vue-demo">Quickstart</a>
 
 ```shell
-npm install cat-charts-vue --save
+npm install q-charts-vue --save
 ```
 
 ```javascript

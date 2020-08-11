@@ -4,13 +4,13 @@
 
 ```html
 <template>
-  <s-chart :data="groupData" :data-fields="dataFields">
-    <s-bar :attrs="attrs" />
-    <s-axis :attrs="{orient:'left'}" :css-grid="false" />
-    <s-axis :attrs="{orient:'bottom'}" />
-    <s-legend :attrs="{align: ['center', 'bottom']}" />
-    <s-tooltip :attrs="tooltipAttrs" />
-  </s-chart>
+  <q-chart :data="groupData" :data-fields="dataFields">
+    <q-bar :attrs="attrs" />
+    <q-axis :attrs="{orient:'left'}" :css-grid="false" />
+    <q-axis :attrs="{orient:'bottom'}" />
+    <q-legend :attrs="{align: ['center', 'bottom']}" />
+    <q-tooltip :attrs="tooltipAttrs" />
+  </q-chart>
 </template>
 <script>
   export default {
