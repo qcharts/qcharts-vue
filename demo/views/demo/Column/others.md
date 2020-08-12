@@ -8,10 +8,10 @@
 <template>
   <q-chart :data="data" :data-fields="dataFields">
     <q-bar :attrs="attrs" />
-    <q-axis :attrs="{orient:'left'}" />
-    <q-axis :attrs="{orient:'bottom'}" />
+    <q-axis :attrs="{orient:'left'}" :css-grid="gridStyle" />
+    <q-axis :attrs="{orient:'bottom'}" :css-grid="false" />
     <q-legend :attrs="{align: ['center', 'bottom']}" />
-    <q-tooltip :attrs="tooltipAttrs" />
+    <q-tooltip />
   </q-chart>
 </template>
 <script>
@@ -83,8 +83,10 @@
             sales: 21.2
           }
         ],
-        tooltipAttrs: {
-          formatter: d => `${d.product} - ${d.year} - ${d.sales}`
+        gridStyle: function(attrs, ind) {
+          if (ind === 3) {
+            return { strokeColor: '#999', lineDash: '' }
+          }
         },
         dataFields: {
           row: 'year',
@@ -109,9 +111,9 @@
   <q-chart :data="data" :data-fields="dataFields">
     <q-bar />
     <q-axis :attrs="{orient:'left'}" />
-    <q-axis :attrs="{orient:'bottom'}" />
-    <q-legend :attrs="{align: ['center', 'bottom']}" />
-    <q-tooltip :attrs="tooltipAttrs" />
+    <q-axis />
+    <q-legend />
+    <q-tooltip />
   </q-chart>
 </template>
 <script>

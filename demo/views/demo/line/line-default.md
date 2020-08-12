@@ -5,15 +5,11 @@
 ```html
 <template>
   <q-chart :data="lineData" :data-fields="dataFields">
-    <q-line :css-point="pointStyle" />
+    <q-line />
     <q-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
-    <q-axis :attrs="{orient:'bottom'}" />
-    <q-legend
-      :attrs="{align: ['center', 'bottom']}"
-      :css-icon="{borderRadius:10}"
-      :css-text="{fontSize:12}"
-    />
-    <q-tooltip :attrs="tooltipAttrs" />
+    <q-axis :attrs="{orient:'bottom'}" :css-grid="false" />
+    <q-legend />
+    <q-tooltip />
   </q-chart>
 </template>
 <script>

@@ -40,14 +40,6 @@ export default {
       visual: null
     }
   },
-  // watch: {
-  //   data: {
-  //     deep: true,
-  //     handler(data) {
-  //       this.visual.source(data)
-  //     }
-  //   }
-  // },
   created: function() {
     if (
       this.$vnode.componentOptions.tag &&
@@ -62,6 +54,7 @@ export default {
         if (element.indexOf('css-') === -1) {
           return
         }
+        console.log(this.$attrs)
         this.visual.style(element.substr(4), this.$attrs[element])
       })
       this.$vnode.componentOptions.listeners &&

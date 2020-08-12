@@ -7,9 +7,9 @@
   <q-chart :data="data" :data-fields="dataFields">
     <q-bar :attrs="attrs" />
     <q-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
-    <q-axis :attrs="{orient:'bottom'}" />
-    <q-legend :attrs="{align: ['center', 'bottom']}" />
-    <q-tooltip :attrs="tooltipAttrs" />
+    <q-axis :attrs="{orient:'bottom'}" :css-grid="false" />
+    <q-legend />
+    <q-tooltip />
   </q-chart>
 </template>
 <script>
@@ -64,41 +64,8 @@
             product: '05-14',
             year: '图例三',
             sales: 3800
-          },
-          {
-            product: '05-15',
-            year: '图例一',
-            sales: 3400
-          },
-          {
-            product: '05-15',
-            year: '图例二',
-            sales: 5100
-          },
-          {
-            product: '05-15',
-            year: '图例三',
-            sales: 4300
-          },
-          {
-            product: '05-16',
-            year: '图例一',
-            sales: 3100
-          },
-          {
-            product: '05-16',
-            year: '图例二',
-            sales: 3400
-          },
-          {
-            product: '05-16',
-            year: '图例三',
-            sales: 2100
           }
         ],
-        tooltipAttrs: {
-          formatter: data => `${data.year} ${data.sales}`
-        },
         dataFields: {
           row: 'year',
           value: 'sales',

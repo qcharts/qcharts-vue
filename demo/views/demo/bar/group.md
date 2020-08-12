@@ -8,8 +8,8 @@
     <q-bar :attrs="attrs" />
     <q-axis :attrs="{orient:'left'}" :css-grid="false" />
     <q-axis :attrs="{orient:'bottom'}" />
-    <q-legend :attrs="{align: ['center', 'bottom']}" />
-    <q-tooltip :attrs="tooltipAttrs" />
+    <q-legend />
+    <q-tooltip />
   </q-chart>
 </template>
 <script>
@@ -97,9 +97,6 @@
             sales: 2100
           }
         ],
-        tooltipAttrs: {
-          formatter: data => `${data.year} ${data.sales}`
-        },
         dataFields: {
           row: 'year',
           value: 'sales',

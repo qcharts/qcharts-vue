@@ -5,11 +5,10 @@
 ```html
 <template>
   <q-chart :data="barData" :data-fields="dataFields">
-    <q-bar :css-pillar="barStyle" />
+    <q-bar />
     <q-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
-    <q-axis :attrs="{orient:'bottom'}" />
-    <q-tooltip :attrs="tooltipAttrs" />
-    <q-legend :attrs="{align: ['center','bottom']}" :css-text="legendText" />
+    <q-axis :attrs="{orient:'bottom'}" :css-grid="false" />
+    <q-tooltip />
   </q-chart>
 </template>
 <script>
@@ -26,12 +25,7 @@
           { value: 64, label: '05-07' },
           { value: 35, label: '05-08' }
         ],
-        tooltipAttrs: {
-          formatter: data => `${data.label} ${data.value}`
-        },
-        dataFields: { row: '*', value: 'value', text: 'label' },
-        barStyle: { fillColor: '#47A1FF' },
-        legendText: { text: '图例一' }
+        dataFields: { value: 'value', text: 'label' }
       }
     }
   }

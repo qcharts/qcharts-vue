@@ -5,19 +5,11 @@
 ```html
 <template>
   <q-chart :data="lineData" :data-fields="dataFields">
-    <q-line
-      :data="lineData"
-      :data-fields="dataFields"
-      :css-point="pointStyle"
-    />
+    <q-line />
     <q-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
-    <q-axis :attrs="{orient:'bottom'}" />
-    <q-legend
-      :attrs="{align: ['center', 'bottom']}"
-      :css-icon="{borderRadius:10}"
-      :css-text="{fontSize:12}"
-    />
-    <q-tooltip :attrs="tooltipAttrs" />
+    <q-axis :attrs="{orient:'bottom'}" :css-grid="false" />
+    <q-legend />
+    <q-tooltip />
   </q-chart>
 </template>
 <script>
@@ -66,18 +58,11 @@
           { date: '05-07', catgory: '图例五', sales: 68.2 },
           { date: '05-08', catgory: '图例五', sales: 80.2 }
         ],
-        tooltipAttrs: {
-          title: function(data) {
-            return data[0].date
-          },
-          formatter: data => `${data.date} ${data.sales}`
-        },
         dataFields: {
           row: 'catgory',
           value: 'sales',
           text: 'date'
-        },
-        pointStyle: { strokeColor: '#fff' }
+        }
       }
     }
   }

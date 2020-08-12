@@ -14,18 +14,18 @@ export default {
   },
   data: () => {
     return {
-      chart: null,
+      // chart: null,
       visuals: [],
       plugins: []
     }
   },
   watch: {
-    // data: {
-    //   deep: true,
-    //   handler(data) {
-    //     this.chart.source(data, this.dataFields)
-    //   }
-    // }
+    data: {
+      deep: true,
+      handler(data) {
+        this.chart.source(data, this.dataFields)
+      }
+    }
   },
   created: function() {
     this[bus].on('addVisuals', data => {
@@ -36,17 +36,18 @@ export default {
     })
   },
   mounted() {
-    this.chart = new Chart({
+    let chart = new Chart({
       container: this.$el
     })
     let data = [...this.data]
     let dataFields = { ...this.dataFields }
-    this.chart.source(data, dataFields)
-    debugger
+    chart.source(data, dataFields)
+    // debugger
     // this.$listeners &&
     //   Object.keys(this.$listeners).forEach(event => {
     //     this.chart.on(`chart:${event}`, this.$listeners[event])
     //   })
+    // this.chart = chart
     let visual = []
     this.visuals.forEach(element => {
       element.rows &&
@@ -57,7 +58,8 @@ export default {
     this.plugins.forEach(element => {
       plug.push(element)
     })
-    this.chart.append([...visual, ...plug])
+    chart.append([...visual, ...plug])
+    this.chart = chart
     // this.chart.render()
   },
   methods: {

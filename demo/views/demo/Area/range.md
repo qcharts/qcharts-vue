@@ -5,19 +5,16 @@
 ```html
 <template>
   <q-chart :data="data" :data-fields="dataFields">
-    <q-area
-      :css-area="areaStyle"
-      :css-point="{fillColor:'transparent',strokeColor:'transparent'}"
-      :css-point:hover="{strokeColor:'#fff'}"
+    <q-area :attrs="{smooth:true}" :css-area="areaStyle" />
+    <q-axis
+      :attrs="{orient:'left'}"
+      :css-axis="false"
+      :css-scale="false"
+      :css-grid="false"
     />
-    <q-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
-    <q-axis :attrs="{orient:'bottom'}" />
-    <q-legend
-      :attrs="{align: ['center', 'bottom']}"
-      :css-icon="{borderRadius:10}"
-      :css-text="{fontSize:12}"
-    />
-    <q-tooltip :attrs="tooltipAttrs" />
+    <q-axis :attrs="{orient:'bottom'}" :css-grid="false" />
+    <q-legend />
+    <q-tooltip />
   </q-chart>
 </template>
 <script>
@@ -42,15 +39,12 @@
           { date: '05-07', category: '图例二', sales: 70.2 },
           { date: '05-08', category: '图例二', sales: 45.2 }
         ],
-        tooltipAttrs: {
-          formatter: data => `${data.date} ${data.sales}`
-        },
         dataFields: { row: 'category', value: 'sales', text: 'date' },
         areaStyle: function(attrs, data, i) {
           if (i === 0) {
-            return { fillColor: 'transparent' }
+            return { fillColor: 'transparent', strokeColor: 'transparent' }
           } else if (i === 1) {
-            return { fillColor: 'rgba(0,0,0,0.1)' }
+            return { fillColor: '#eee' }
           }
         }
       }

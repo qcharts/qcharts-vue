@@ -8,8 +8,8 @@
     <q-bar :attrs="attrs" />
     <q-axis :attrs="{orient:'left'}" :css-grid="false" />
     <q-axis :attrs="{orient:'bottom'}" />
-    <q-legend :attrs="{align: ['center', 'bottom']}" />
-    <q-tooltip :attrs="tooltipAttrs" />
+    <q-legend />
+    <q-tooltip />
   </q-chart>
 </template>
 <script>
@@ -17,6 +17,7 @@
     data: function() {
       return {
         attrs: {
+          transpose: true,
           stack: true,
           barWidth: 20
         },
@@ -102,9 +103,6 @@
             value: 20.2
           }
         ],
-        tooltipAttrs: {
-          formatter: data => `${data.type} ${data.value}`
-        },
         dataFields: { row: 'type', value: 'value', text: 'data' }
       }
     }

@@ -4,28 +4,18 @@
 
 ```html
 <template>
-  <s-chart :data="lineData" :data-fields="dataFields">
-    <s-line
-      :attrs="attrs"
-      :data="lineData"
-      :data-fields="dataFields"
-      :css-point="pointStyle"
-    />
-    <s-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
-    <s-axis :attrs="{orient:'bottom'}" />
-    <s-legend
-      :attrs="{align: ['center', 'bottom']}"
-      :css-icon="{borderRadius:10}"
-      :css-text="{fontSize:12}"
-    />
-    <s-tooltip :attrs="tooltipAttrs" />
-  </s-chart>
+  <q-chart :data="lineData" :data-fields="dataFields">
+    <q-line :css-line="lineStyle" />
+    <q-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
+    <q-axis :attrs="{orient:'bottom'}" :css-grid="false" />
+    <q-legend />
+    <q-tooltip />
+  </q-chart>
 </template>
 <script>
   export default {
     data: function() {
       return {
-        attrs: { smooth: true },
         lineData: [
           { date: '05-01', catgory: '图例一', sales: 15.2 },
           { date: '05-02', catgory: '图例一', sales: 39.2 },
@@ -44,18 +34,16 @@
           { date: '05-07', catgory: '图例二', sales: 90.2 },
           { date: '05-08', catgory: '图例二', sales: 85.2 }
         ],
-        tooltipAttrs: {
-          title: function(data) {
-            return data[0].date
-          },
-          formatter: data => `${data.date} ${data.sales}`
-        },
         dataFields: {
           row: 'catgory',
           value: 'sales',
           text: 'date'
         },
-        pointStyle: { strokeColor: '#fff' }
+        lineStyle: function(attrs, data, i) {
+          if (i === 1) {
+            return { smooth: true }
+          }
+        }
       }
     }
   }

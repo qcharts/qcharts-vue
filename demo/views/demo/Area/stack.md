@@ -1,22 +1,15 @@
-## Stacked Area Chart 堆叠面积图
+## Stacked Area Chart 取件面积图
 
 :::demo
 
 ```html
 <template>
   <q-chart :data="data" :data-fields="dataFields">
-    <q-area
-      :css-point="{fillColor:'transparent',strokeColor:'transparent'}"
-      :css-point:hover="{strokeColor:'#fff'}"
-    />
+    <q-area :attrs="{smooth:true}" />
     <q-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
-    <q-axis :attrs="{orient:'bottom'}" />
-    <q-legend
-      :attrs="{align: ['center', 'bottom']}"
-      :css-icon="{borderRadius:10}"
-      :css-text="{fontSize:12}"
-    />
-    <q-tooltip :attrs="tooltipAttrs" />
+    <q-axis :attrs="{orient:'bottom'}" :css-grid="false" />
+    <q-legend />
+    <q-tooltip />
   </q-chart>
 </template>
 <script>
@@ -41,9 +34,6 @@
           { date: '05-07', category: '图例二', sales: 70.2 },
           { date: '05-08', category: '图例二', sales: 45.2 }
         ],
-        tooltipAttrs: {
-          formatter: data => `${data.date} ${data.sales}`
-        },
         dataFields: { row: 'category', value: 'sales', text: 'date' }
       }
     }

@@ -23,10 +23,10 @@ export default [
     title: '多折线图',
     path: 'multi',
     component: () => import('./line-multi.md')
-  },
-  {
-    title: '其它',
-    path: 'others',
-    component: () => import('./line-others.md')
   }
+  // {
+  //   title: '其它',
+  //   path: 'others',
+  //   component: () => import('./line-others.md')
+  // }
 ]
