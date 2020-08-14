@@ -5,12 +5,7 @@
 ```html
 <template>
   <q-chart :data="pieData" :data-fields="dataFields">
-    <q-pie
-      :attrs="attrs"
-      :css-guideline="true"
-      :css-guideText="{fontSize: '12px'}"
-      :css-sector="sectorStyle"
-    />
+    <q-pie :attrs="attrs" />
     <q-legend :attrs="legendAttrs" />
   </q-chart>
 </template>
@@ -65,7 +60,6 @@
           }
         ],
         dataFields: { row: 'year', value: 'population' },
-        sectorStyle: { lineWidth: 1, strokeColor: '#fff' },
         legendAttrs: { orient: 'vertical', align: ['right', 'center'] }
       }
     }

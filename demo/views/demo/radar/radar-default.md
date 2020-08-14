@@ -5,9 +5,12 @@
 ```html
 <template>
   <q-chart :data="radarData" :data-fields="dataFields">
-    <q-radar :css-point="false" />
-    <q-tooltip :attrs="tooltipAttrs" />
-    <q-legend :attrs="{align: ['center', 'bottom']}" />
+    <q-radar
+      :css-section="{opacity:0.3}"
+      :css-section:hvoer="{opacity: 0.8,lineWidth:2,strokeColor:'red'}"
+    />
+    <q-tooltip />
+    <q-legend />
   </q-chart>
 </template>
 <script>
@@ -20,15 +23,15 @@
           { label: '分类三', category: '类别一', value: 40 },
           { label: '分类四', category: '类别一', value: 46 },
           { label: '分类五', category: '类别一', value: 30 },
-          { label: '分类六', category: '类别一', value: 62 }
+          { label: '分类六', category: '类别一', value: 62 },
+
+          { label: '分类一', category: '类别二', value: 69 },
+          { label: '分类二', category: '类别二', value: 14 },
+          { label: '分类三', category: '类别二', value: 70 },
+          { label: '分类四', category: '类别二', value: 26 },
+          { label: '分类五', category: '类别二', value: 50 },
+          { label: '分类六', category: '类别二', value: 52 }
         ],
-        tooltipAttrs: {
-          title: d => d[0].data[0].category,
-          formatter: d => {
-            const content = d.data.map(d => `${d.label}:${d.value}`)
-            return content.join('\n')
-          }
-        },
         dataFields: { row: 'category', value: 'value', text: 'label' }
       }
     }

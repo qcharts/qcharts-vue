@@ -20,9 +20,8 @@ export default [
     component: () => import('./pie-dounght.md')
   },
   {
-    title: '南丁格尔玫瑰图',
-    path: 'rose',
-    hidden: true,
-    component: () => import('./pie-rose.md')
+    title: '弧饼图',
+    path: 'arc',
+    component: () => import('./pie-arc.md')
   }
 ]

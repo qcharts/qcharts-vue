@@ -5,12 +5,7 @@
 ```html
 <template>
   <q-chart :data="pieData" :data-fields="dataFields">
-    <q-pie
-      :attrs="attrs"
-      :css-guideline="true"
-      :css-guideText="true"
-      :css-sector="{lineWidth: 1, strokeColor: '#fff'}"
-    />
+    <q-pie :attrs="attrs" />
     <q-legend :attrs="legendAttrs" />
   </q-chart>
 </template>
@@ -19,7 +14,7 @@
     data: function() {
       return {
         attrs: {
-          radius: 0.6
+          radius: 0.7
         },
         pieData: [
           {
