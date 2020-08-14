@@ -6,7 +6,7 @@
 <template>
   <q-chart :data="barData" :data-fields="dataFields">
     <q-polarBar :attrs="attrs" />
-    <q-tooltip :attrs="tooltipAttrs" />
+    <q-tooltip />
     <q-legend :attrs="{align: ['center', 'bottom']}" />
   </q-chart>
 </template>
@@ -131,9 +131,6 @@
             sales: 10
           }
         ],
-        tooltipAttrs: {
-          formatter: data => `${data.product}: ${data.sales}`
-        },
         dataFields: {
           row: 'year',
           value: 'sales',

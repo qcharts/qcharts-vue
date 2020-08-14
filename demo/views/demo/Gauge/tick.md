@@ -4,8 +4,8 @@
 
 ```html
 <template>
-  <q-chart :data="data" :data-fields="dataFields">
-    <q-gauge :attrs="attrs" :css-title="{fontSize:48}" />
+  <q-chart>
+    <q-gauge :attrs="attrs" :css-title="{fontSize: 36}" />
   </q-chart>
 </template>
 <script>
@@ -17,17 +17,7 @@
           max: 10,
           tickStep: 1,
           tickLength: -10,
-          title: d => `${d.value}`,
-          subTitle: 'Hello'
-        },
-
-        data: [
-          {
-            value: 7.3
-          }
-        ],
-        dataFields: {
-          value: 'value'
+          percent: 7.3
         }
       }
     }
@@ -43,8 +33,8 @@
 
 ```html
 <template>
-  <q-chart :data="data" :data-fields="dataFields">
-    <q-gauge :attrs="attrs" :css-title="{fontSize:48}" />
+  <q-chart >
+    <q-gauge :attrs="attrs" :css-title="{fontSize:36}" />
   </s-chart>
 </template>
 <script>
@@ -54,20 +44,10 @@
         attrs: {
           min: 0,
           max: 10,
+          percent:7.3,
           tickStep: 1,
           tickLength: 10,
           labelOffset: 20,
-          title: d => `${d.value}`,
-          subTitle: 'Hello'
-        },
-
-        data: [
-          {
-            value: 7.3
-          }
-        ],
-        dataFields: {
-          value: 'value'
         }
       }
     }

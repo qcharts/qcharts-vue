@@ -4,8 +4,8 @@
 
 ```html
 <template>
-  <q-chart :data="data" :data-fields="dataFields">
-    <q-gauge :attrs="attrs" :css-title="{fontSize:48}" />
+  <q-chart>
+    <q-gauge :attrs="attrs" :css-title="{fontSize:36}" />
   </q-chart>
 </template>
 <script>
@@ -15,23 +15,22 @@
         attrs: {
           min: 0,
           max: 100,
+          percent: 60,
           lineWidth: 20,
-          tickStep: 10,
-          title: d => `${d.value}`,
-          subTitle: d => `${d.text}`
-        },
-
-        data: [
-          {
-            text: '信用分',
-            value: 45
-          }
-        ],
-        dataFields: {
-          row: 'text',
-          value: 'value'
+          tickStep: 10
         }
       }
+    },
+    mounted() {
+      setTimeout(() => {
+        this.attrs = {
+          min: 0,
+          max: 100,
+          percent: 45,
+          lineWidth: 20,
+          tickStep: 10
+        }
+      }, 3000)
     }
   }
 </script>

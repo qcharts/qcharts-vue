@@ -54,7 +54,6 @@ export default {
         if (element.indexOf('css-') === -1) {
           return
         }
-        console.log(this.$attrs)
         this.visual.style(element.substr(4), this.$attrs[element])
       })
       this.$vnode.componentOptions.listeners &&

@@ -6,7 +6,7 @@
 <template>
   <q-chart :data="barData" :data-fields="dataFields">
     <q-polarBar :attrs="attrs" />
-    <q-tooltip :attrs="tooltipAttrs" />
+    <q-tooltip />
   </q-chart>
 </template>
 <script>
@@ -27,10 +27,7 @@
           { value: 5300, label: 'TOP7' },
           { value: 3400, label: 'TOP8' }
         ],
-        tooltipAttrs: {
-          formatter: data => `${data.label} ${data.value}`
-        },
-        dataFields: { row: '*', value: 'value', text: 'label' }
+        dataFields: { value: 'value', text: 'label' }
       }
     }
   }

@@ -5,25 +5,8 @@
 ```html
 <template>
   <q-chart :data="pieData" :data-fields="dataFields">
-    <q-pie
-      :attrs="attrs"
-      :rows="rows1"
-      :color="pieColor"
-      :css-text="textStyle"
-    />
-    <q-pie
-      :attrs="attrs2"
-      :rows="rows2"
-      :color="pieColor2"
-      :css-guideline="true"
-      :css-guideText="{fontSize: '12px'}"
-    />
-    <q-legend
-      :color="legendColor"
-      :attrs="legendAttrs"
-      :css-icon="legendIconStyle"
-      :css-text="legendTextStyle"
-    />
+    <q-pie :attrs="attrs" :rows="rows1" />
+    <q-legend />
   </q-chart>
 </template>
 <script>

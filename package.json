@@ -79,6 +79,7 @@
     "webpack-merge": "^4.1.5"
   },
   "dependencies": {
+    "filter-clone": "0.0.12",
     "spritejs": "^3.7.23"
   }
 }

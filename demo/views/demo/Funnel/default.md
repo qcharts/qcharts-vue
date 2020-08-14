@@ -5,14 +5,8 @@
 ```html
 <template>
   <q-chart :data="data" :data-fields="dataFields">
-    <q-funnel
-      :attrs="attrs"
-      :css-guideLine="true"
-      :css-guideText="true"
-      :css-polygon:hover="{opacity:0.5}"
-      :css-polygon="{ strokeColor:'transparent'}"
-    />
-    <q-tooltip :attrs="tooltipAttrs" />
+    <q-funnel :attrs="attrs" />
+    <q-tooltip />
     <q-legend :attrs="{align: ['center', 'bottom']}" />
   </q-chart>
 </template>
@@ -35,15 +29,11 @@
           { value: 1503, label: '完成交易' },
           { value: 1204, label: '未完成交易' }
         ],
-        tooltipAttrs: {
-          formatter: data => `${data.label} ${data.value}`
-        },
+
         dataFields: {
           row: 'label',
-          col: 'value',
           value: 'value',
-          text: 'label',
-          sort: (a, b) => b.value - a.value
+          text: 'label'
         }
       }
     }

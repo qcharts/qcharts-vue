@@ -39,27 +39,25 @@ export default {
     let chart = new Chart({
       container: this.$el
     })
-    let data = [...this.data]
-    let dataFields = { ...this.dataFields }
+    let data = this.data ? [...this.data] : []
+    let dataFields = this.dataFields ? { ...this.dataFields } : {}
     chart.source(data, dataFields)
-    // debugger
     // this.$listeners &&
     //   Object.keys(this.$listeners).forEach(event => {
     //     this.chart.on(`chart:${event}`, this.$listeners[event])
     //   })
-    // this.chart = chart
-    let visual = []
+    let visuals = []
     this.visuals.forEach(element => {
       element.rows &&
-        element.visual.source(this.chart.dataset.selectRows(element.rows))
-      visual.push(element.visual)
+        element.visual.source(chart.dataset.selectRows(element.rows))
+      visuals.push(element.visual)
     })
-    let plug = []
+    let plugins = []
     this.plugins.forEach(element => {
-      plug.push(element)
+      plugins.push(element)
     })
-    chart.append([...visual, ...plug])
-    this.chart = chart
+    chart.append([...visuals, ...plugins])
+    // this.chart = chart
     // this.chart.render()
   },
   methods: {

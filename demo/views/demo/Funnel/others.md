@@ -45,7 +45,6 @@
 
         dataFields: {
           row: 'label',
-          col: 'value',
           value: 'value',
           text: 'label'
         }
