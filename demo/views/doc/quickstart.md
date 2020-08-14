@@ -2,11 +2,11 @@
 
 ### 特点
 
-CatChartsVue 是一个基于 <a target="_blank" href="https://www.spritejs.com">spritejs</a> , <a  target="_blank" href="https://www.npmjs.com/package/@qcharts/core">qcharts</a> 封装的 <a target="_blank" href="https://vuejs.org/">Vue</a> 图表库，可以让用户以组件的形式组合出各种图表。 <a target="_blank" href="https://www.spritejs.com/cat-charts-vue/">→ 详细文档</a>
+CatChartsVue 是一个基于 <a target="_blank" href="https://www.spritejs.com">spritejs</a> , <a  target="_blank" href="https://www.npmjs.com/package/@qcharts/core">qcharts</a> 封装的 <a target="_blank" href="https://vuejs.org/">Vue</a> 图表库，可以让用户以组件的形式组合出各种图表。 <a target="_blank" href="https://www.spritejs.com/qcharts-vue/">→ 详细文档</a>
 
 ### 如何使用
 
-1.通过 npm 获取 CatChartsVue，我们提供了 CatChartsVue npm 包，通过下面的命令即可完成安装，Demo：<a target="_blank" href="https://github.com/yaotaiyang/cat-charts-vue-demo">Quickstart</a>
+1.通过 npm 获取 CatChartsVue，我们提供了 CatChartsVue npm 包，通过下面的命令即可完成安装，Demo：<a target="_blank" href="https://github.com/yaotaiyang/qcharts-vue-demo">Quickstart</a>
 
 ```shell
 npm install q-charts-vue --save
@@ -14,7 +14,7 @@ npm install q-charts-vue --save
 
 ```javascript
 // 通过模块引入的方式使用CatCharts
-import * as CatChartsVue from 'cat-charts-vue'
+import * as CatChartsVue from 'qcharts-vue'
 Vue.use(CatChartsVue)
 ```
 
@@ -24,7 +24,7 @@ Vue.use(CatChartsVue)
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/spritejs/dist/spritejs.min.js"></script>
 <script src="https://unpkg.com/@qcharts/core/dist/index.js"></script>
-<script src="https://unpkg.com/cat-charts-vue/lib/index.js"></script>
+<script src="https://unpkg.com/qcharts-vue/lib/index.js"></script>
 ```
 
 ```javascript

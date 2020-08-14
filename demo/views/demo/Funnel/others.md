@@ -5,20 +5,10 @@
 ```html
 <template>
   <q-chart :data="data" :data-fields="dataFields">
-    <q-funnel
-      :attrs="rightAttrs"
-      :css-guideLine="true"
-      :css-guideText="true"
-      :css-polygon="{ strokeColor:'transparent'}"
-    />
-    <q-funnel
-      :attrs="leftAttrs"
-      :css-guideLine="true"
-      :css-guideText="true"
-      :css-polygon="{ strokeColor:'transparent'}"
-    />
-    <q-tooltip :attrs="tooltipAttrs" />
-    <q-legend :attrs="{align: ['center', 'bottom']}" />
+    <q-funnel :attrs="rightAttrs" />
+    <q-funnel :attrs="leftAttrs" />
+    <q-tooltip />
+    <q-legend />
   </q-chart>
 </template>
 <script>
@@ -26,35 +16,38 @@
     data: function() {
       return {
         leftAttrs: {
-          size: ['25%', '70%'],
-          pos: ['50%', '20%'],
+          clientRect: {
+            left: '50%',
+            top: '20%',
+            width: '25%',
+            height: '70%'
+          },
           align: 'left',
-          pyramid: true,
-          formatter: d => `${d.value}`
+          pyramid: true
         },
         rightAttrs: {
-          size: ['25%', '70%'],
-          pos: ['22%', '20%'],
+          clientRect: {
+            left: '22%',
+            top: '20%',
+            width: '25%',
+            height: '70%'
+          },
           align: 'right',
-          pyramid: true,
-          formatter: d => `${d.value}`
+          pyramid: true
         },
         data: [
           { value: 3350, label: '直接访问' },
-          { value: 1648, label: '搜索引擎' },
+          { value: 3000, label: '邮件营销' },
           { value: 2440, label: '联盟广告' },
-          { value: 1550, label: '视频广告' },
-          { value: 3000, label: '邮件营销' }
+          { value: 1648, label: '搜索引擎' },
+          { value: 1550, label: '视频广告' }
         ],
-        tooltipAttrs: {
-          formatter: data => `${data.label} ${data.value}`
-        },
+
         dataFields: {
           row: 'label',
           col: 'value',
           value: 'value',
-          text: 'label',
-          sort: (a, b) => b.value - a.value
+          text: 'label'
         }
       }
     }
