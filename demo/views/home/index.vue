@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="desr">
-      Qharts-Vue 是一个基于
+      QChartsVue 是一个基于
       <a href="https://www.spritejs.com/">spritejs</a> ,
       <a href="https://www.qcharts.cn">QCharts</a>
       封装的图表库，可以让用户以组件的形式组合出各种图表。如果你使用Js或者React，可以使用
       <a href="https://www.qcharts.cn">QCharts</a> 或
-      <a href="https://www.qcharts.cn/qharts-react/">QCharts-React</a>
+      <a href="https://www.qcharts.cn/qcharts-react/">QChartsReact</a>
     </div>
     <section class="intro">
       <h5>折线图</h5>
