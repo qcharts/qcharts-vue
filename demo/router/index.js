@@ -41,11 +41,11 @@ export default new Router({
       path: '/demo',
       component: withArticleContainer('demo', demos),
       children: demos
-    },
-    {
-      path: '/plugin',
-      component: withArticleContainer('plugin', plugins),
-      children: plugins
     }
+    // {
+    //   path: '/plugin',
+    //   component: withArticleContainer('plugin', plugins),
+    //   children: plugins
+    // }
   ]
 })

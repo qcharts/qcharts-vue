@@ -9,8 +9,8 @@ import { bus } from '../../utils'
 export default {
   name: 'q-chart',
   props: {
-    data: { type: Array, default: () => {} },
-    dataFields: { type: Object, default: () => {} }
+    data: { type: Array, default: () => { } },
+    dataFields: { type: Object, default: () => { } }
   },
   data: () => {
     return {
@@ -22,12 +22,12 @@ export default {
   watch: {
     data: {
       deep: true,
-      handler(data) {
+      handler (data) {
         this.chart.source(data, this.dataFields)
       }
     }
   },
-  created: function() {
+  created: function () {
     this[bus].on('addVisuals', data => {
       this.visuals.push(data)
     })
@@ -35,22 +35,30 @@ export default {
       this.plugins.push(data)
     })
   },
-  mounted() {
+  mounted () {
     let chart = new Chart({
       container: this.$el
     })
     let data = this.data ? [...this.data] : []
     let dataFields = this.dataFields ? { ...this.dataFields } : {}
     chart.source(data, dataFields)
+    const dataset = chart.dataset;
     // this.$listeners &&
     //   Object.keys(this.$listeners).forEach(event => {
     //     this.chart.on(`chart:${event}`, this.$listeners[event])
     //   })
     let visuals = []
+    let datasets = []
     this.visuals.forEach(element => {
-      element.rows &&
-        element.visual.source(chart.dataset.selectRows(element.rows))
-      visuals.push(element.visual)
+      if (element.rows) {
+        datasets.push(dataset.selectRows(element.rows))
+      }
+    })
+    this.visuals.forEach((ele, ind) => {
+      if (ele.rows) {
+        ele.visual.source(datasets[ind])
+      }
+      visuals.push(ele.visual)
     })
     let plugins = []
     this.plugins.forEach(element => {

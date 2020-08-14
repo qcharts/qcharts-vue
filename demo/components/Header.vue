@@ -29,9 +29,9 @@
             <router-link to="/demo">图表示例</router-link>
           </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link to="/plugin">插件示例</router-link>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>
