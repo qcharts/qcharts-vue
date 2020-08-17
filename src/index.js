@@ -1,76 +1,64 @@
-import Chart from './components/q-chart/'
-import Area from './components/visuals/q-area/'
-import Bar from './components/visuals/q-bar/'
-import Pie from './components/visuals/q-pie/'
-import Line from './components/visuals/q-line/'
-import Radar from './components/visuals/q-radar/'
-import Funnel from './components/visuals/q-funnel/'
-import Scatter from './components/visuals/q-scatter/'
-import Gauge from './components/visuals/q-gauge/'
-import PolarBar from './components/visuals/q-polarBar/'
-import Axis from './components/plugins/q-axis/'
-import Tooltip from './components/plugins/q-tooltip/'
-import Legend from './components/plugins/q-legend/'
+import Chart from './components'
 import { bus } from './utils'
-import global from './components/global.js'
-const components = [
-  Chart,
-  Area,
-  Bar,
-  Pie,
-  Radar,
-  Line,
-  Funnel,
-  Gauge,
-  PolarBar,
-  Scatter,
-  Axis,
-  Tooltip,
-  Legend
+import global from './global.js'
+import pluginNode from './components/pluginNode'
+import visualNode from './components/visualNode'
+import qcharts from '@qcharts/core'
+const BlackList = [
+  'h',
+  'version',
+  'BaseVisual',
+  'BasePlugin',
+  'Chart',
+  'Dataset',
+  'Global',
+  'Axis',
+  'Tooltip',
+  'Legend'
 ]
-
-components.map(component => {
-  // 按需加载组件
-  component.install = Vue => Vue.component(component.name, component)
-})
-
-// 整体插件机制
-const install = Vue => {
-  components.map(component => Vue.component(component.name, component))
-  const Bus = new Vue({
-    methods: {
-      emit(event, ...args) {
-        this.$emit(event, ...args)
-      },
-      on(event, callback) {
-        this.$on(event, callback)
-      },
-      off(event, callback) {
-        this.$off(event, callback)
-      }
-    }
-  })
-  Vue.prototype[bus] = Bus //事件总线放在原型上
-  Vue.prototype.global = global
-}
+const visualsNames = Object.keys(qcharts).filter(t => BlackList.indexOf(t) < 0)
+const pluginsNames = ['Axis', 'Tooltip', 'Legend']
+const components = [
+  { name: 'Chart', component: Chart },
+  ...visualsNames.map(name => ({
+    name,
+    component: visualNode(name)
+  })),
+  ...pluginsNames.map(name => ({
+    name,
+    component: pluginNode(name)
+  }))
+]
 
 // eslint-disable-next-line no-undef
 const version = require('../package.json').version
+// 整体插件机制
+const QchartsVue = {
+  version: version,
+  install: Vue => {
+    components.map(k => {
+      let name = k.name.replace(k.name[0], k.name[0].toLocaleLowerCase())
+      Vue.component(`q-${name}`, k.component)
+    })
+    const Bus = new Vue({
+      methods: {
+        emit(event, ...args) {
+          this.$emit(event, ...args)
+        },
+        on(event, callback) {
+          this.$on(event, callback)
+        },
+        off(event, callback) {
+          this.$off(event, callback)
+        }
+      }
+    })
+    Vue.prototype[bus] = Bus //事件总线放在原型上
+    Vue.prototype.global = global
+  }
+}
 
-export {
-  Chart,
-  Area,
-  Bar,
-  Line,
-  Radar,
-  Pie,
-  Funnel,
-  Scatter,
-  Gauge,
-  PolarBar,
-  Axis,
-  Tooltip,
-  Legend,
-  install,
-  version
+export default QchartsVue
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(QchartsVue)
 }

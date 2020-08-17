@@ -5,12 +5,12 @@
 </template>
 <script>
 import { Chart } from '@qcharts/core'
-import { bus } from '../../utils'
+import { bus } from '../utils'
 export default {
   name: 'q-chart',
   props: {
-    data: { type: Array, default: () => { } },
-    dataFields: { type: Object, default: () => { } }
+    data: { type: Array, default: () => {} },
+    dataFields: { type: Object, default: () => {} }
   },
   data: () => {
     return {
@@ -22,12 +22,12 @@ export default {
   watch: {
     data: {
       deep: true,
-      handler (data) {
+      handler(data) {
         this.chart.source(data, this.dataFields)
       }
     }
   },
-  created: function () {
+  created: function() {
     this[bus].on('addVisuals', data => {
       this.visuals.push(data)
     })
@@ -35,14 +35,14 @@ export default {
       this.plugins.push(data)
     })
   },
-  mounted () {
+  mounted() {
     let chart = new Chart({
       container: this.$el
     })
     let data = this.data ? [...this.data] : []
     let dataFields = this.dataFields ? { ...this.dataFields } : {}
     chart.source(data, dataFields)
-    const dataset = chart.dataset;
+    const dataset = chart.dataset
     // this.$listeners &&
     //   Object.keys(this.$listeners).forEach(event => {
     //     this.chart.on(`chart:${event}`, this.$listeners[event])
@@ -56,7 +56,7 @@ export default {
     })
     this.visuals.forEach((ele, ind) => {
       if (ele.rows) {
-        ele.visual.source(datasets[ind])
+        ele.visual.source(datasets[ind], dataFields)
       }
       visuals.push(ele.visual)
     })
@@ -65,7 +65,7 @@ export default {
       plugins.push(element)
     })
     chart.append([...visuals, ...plugins])
-    // this.chart = chart
+    this.chart = chart
     // this.chart.render()
   },
   methods: {

@@ -3,12 +3,12 @@ import * as Vuep from 'vuep'
 import App from './App.vue'
 import router from './router'
 import BlockDemo from './components/BlockDemo.vue'
-import { install } from '../src'
+import QchartsVue from '../src/index'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'highlight.js/styles/xcode.css'
 
 Vue.config.productionTip = false
-Vue.use(install)
+Vue.use(QchartsVue)
 Vue.use(
   Vuep,
   {

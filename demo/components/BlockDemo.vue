@@ -1,8 +1,5 @@
 <template>
-  <div
-    ref="block"
-    :class="['block-demo', isFullscreen ? 'block-demo--fixed' : '']"
-  >
+  <div ref="block" :class="['block-demo', isFullscreen ? 'block-demo--fixed' : '']">
     <div ref="preview" class="preview">
       <preview :value="preview"></preview>
     </div>
@@ -11,20 +8,10 @@
         <span title="运行" class="icon" @click="syncCode">
           <img src="./play.svg" alt="运行" />
         </span>
-        <span
-          v-if="!isFullscreen"
-          title="全屏"
-          class="icon"
-          @click="fullscreen"
-        >
+        <span v-if="!isFullscreen" title="全屏" class="icon" @click="fullscreen">
           <img src="./full-screen.svg" alt="全屏" />
         </span>
-        <span
-          v-if="isFullscreen"
-          title="取消全屏"
-          class="icon"
-          @click="fullscreen"
-        >
+        <span v-if="isFullscreen" title="取消全屏" class="icon" @click="fullscreen">
           <img src="./recovery.svg" alt="取消全屏" />
         </span>
         <span class="icon" @click="copyCode">
@@ -162,7 +149,7 @@ export default {
         component.template = component.template || ${JSON.stringify(
           template.content
         )}
-        Vue.use(qChartsVue);
+        Vue.use(QchartsVue);
         new Vue(component).$mount('#app')
       <\/script>`)
       // console.log(scripts)
