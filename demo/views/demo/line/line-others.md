@@ -11,15 +11,15 @@
       :attrs="attrs"
       :data="lineData"
       :data-fields="dataFields"
-      :css-point="pointStyle"
-      :css-point:hover="pointHoverStyle"
+      :style-point="pointStyle"
+      :style-point:hover="pointHoverStyle"
     />
-    <q-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
+    <q-axis :attrs="{orient:'left'}" :style-axis="false" :style-scale="false" />
     <q-axis :attrs="{orient:'bottom'}" />
     <q-legend
       :attrs="{align: ['center', 'bottom']}"
-      :css-icon="{borderRadius:10}"
-      :css-text="{fontSize:12}"
+      :style-icon="{borderRadius:10}"
+      :style-text="{fontSize:12}"
     />
     <q-tooltip :attrs="tooltipAttrs" />
   </q-chart>
@@ -77,8 +77,8 @@
 ```html
 <template>
   <q-chart :data="data" :data-fields="dataFields">
-    <q-line :attrs="{smooth:true}" :css-point="{strokeColor:'transparent'}" />
-    <q-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
+    <q-line :attrs="{smooth:true}" :style-point="{strokeColor:'transparent'}" />
+    <q-axis :attrs="{orient:'left'}" :style-axis="false" :style-scale="false" />
     <q-axis :attrs="{orient:'bottom'}" />
     <q-legend :attrs="{align: ['center', 'bottom']}" />
     <q-tooltip :attrs="tooltipAttrs" />
@@ -154,7 +154,7 @@
 <template>
   <q-chart :data="lineData" :data-fields="dataFields">
     <q-bar :attrs="{mouseDisabled:true}" />
-    <q-line :attrs="{axisGap:true}" :css-point="pointStyle" />
+    <q-line :attrs="{axisGap:true}" :style-point="pointStyle" />
     <q-axis :attrs="{orient:'left'}" />
     <q-axis :attrs="{orient:'bottom'}" />
     <q-legend :attrs="{align: ['center', 'bottom']}" />

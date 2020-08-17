@@ -5,7 +5,7 @@
 ```html
 <template>
   <q-chart>
-    <q-gauge :attrs="attrs" :css-title="{fontSize: 36}" />
+    <q-gauge :attrs="attrs" :style-title="{fontSize: 36}" />
   </q-chart>
 </template>
 <script>
@@ -34,7 +34,7 @@
 ```html
 <template>
   <q-chart >
-    <q-gauge :attrs="attrs" :css-title="{fontSize:36}" />
+    <q-gauge :attrs="attrs" :style-title="{fontSize:36}" />
   </s-chart>
 </template>
 <script>

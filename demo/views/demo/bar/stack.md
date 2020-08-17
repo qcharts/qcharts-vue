@@ -6,7 +6,7 @@
 <template>
   <q-chart :data="data" :data-fields="dataFields">
     <q-bar :attrs="attrs" />
-    <q-axis :attrs="{orient:'left'}" :css-grid="false" />
+    <q-axis :attrs="{orient:'left'}" :style-grid="false" />
     <q-axis :attrs="{orient:'bottom'}" />
     <q-legend />
     <q-tooltip />

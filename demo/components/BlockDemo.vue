@@ -123,7 +123,7 @@ export default {
       heads.push(
         `<script src="https://s3.ssl.qhres.com/!f868948f/vue.min.js"><\/script>`
       )
-      heads.push('<style>html,body{height:100%;padding:0;margin:0}</style>')
+      heads.push('<style>html,body{height:100%;padding:0;margin:0;overflow:hidden;}</style>')
       const scripts = []
       pkgs.forEach(pkg => {
         scripts.push(

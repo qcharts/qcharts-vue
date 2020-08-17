@@ -7,14 +7,14 @@
   <q-chart :data="pieData" :data-fields="dataFields">
     <q-pie
       :attrs="attrs"
-      :css-guideline="true"
-      :css-guideText="true"
-      :css-sector="{lineWidth: 1, strokeColor: '#fff'}"
+      :style-guideline="true"
+      :style-guideText="true"
+      :style-sector="{lineWidth: 1, strokeColor: '#fff'}"
     />
     <q-legend
       :attrs="legendAttrs"
-      :css-icon="iconStyle"
-      :css-text="textStyle"
+      :style-icon="iconStyle"
+      :style-text="textStyle"
     />
   </q-chart>
 </template>

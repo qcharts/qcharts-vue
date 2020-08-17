@@ -4,13 +4,17 @@
   </div>
 </template>
 <script>
-import { Chart } from '@qcharts/core'
+import { Chart,theme } from '@qcharts/core'
 import { bus } from '../utils'
 export default {
   name: 'q-chart',
   props: {
     data: { type: Array, default: () => {} },
-    dataFields: { type: Object, default: () => {} }
+    dataFields: { type: Object, default: () => {} },
+    theme:{
+      type:Object,
+      default:()=>{}
+    }
   },
   data: () => {
     return {
@@ -47,6 +51,9 @@ export default {
     //   Object.keys(this.$listeners).forEach(event => {
     //     this.chart.on(`chart:${event}`, this.$listeners[event])
     //   })
+    if(this.theme){
+      theme.set(this.theme)
+    }
     let visuals = []
     let datasets = []
     this.visuals.forEach(element => {
@@ -64,12 +71,8 @@ export default {
     })
     chart.append([...visuals, ...plugins])
     this.chart = chart
-    // this.chart.render()
   },
   methods: {
-    // append(element) {
-    //   this.chart.$group.append(element)
-    // }
   }
 }
 </script>

@@ -5,14 +5,14 @@
 ```html
 <template>
   <q-chart :data="data" :data-fields="dataFields">
-    <q-area :attrs="{smooth:true}" :css-area="areaStyle" />
+    <q-area :attrs="{smooth:true}" :style-area="areaStyle" />
     <q-axis
       :attrs="{orient:'left'}"
-      :css-axis="false"
-      :css-scale="false"
-      :css-grid="false"
+      :style-axis="false"
+      :style-scale="false"
+      :style-grid="false"
     />
-    <q-axis :attrs="{orient:'bottom'}" :css-grid="false" />
+    <q-axis :attrs="{orient:'bottom'}" :style-grid="false" />
     <q-legend />
     <q-tooltip />
   </q-chart>

@@ -23,10 +23,13 @@ export default function(name) {
         // this.id && this.visual.id=1
         // this.visual.color(this.color)
         Object.keys(this.$attrs).forEach(element => {
-          if (element.indexOf('css-') === -1) {
-            return
+          let curAttr = this.$attrs[element]
+          if (element.indexOf('theme') === 0) {
+            this.visual.theme.set(curAttr)
           }
-          this.visual.style(element.substr(4), this.$attrs[element])
+          if (element.indexOf('style-') !== -1) {
+            this.visual.style(element.substr(6), curAttr)
+          }
         })
         this.$vnode.componentOptions.listeners &&
           Object.keys(this.$vnode.componentOptions.listeners).forEach(

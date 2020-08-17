@@ -9,8 +9,8 @@
   <s-chart :data="data" :data-fields="dataFields">
     <s-pie />
     <s-legend />
-    <s-tooltip :attrs="attrs" :css-background="bgStyle" :css-title="titleStyle"
-      :css-icon="iconStyle" :css-text="textStyle"/>
+    <s-tooltip :attrs="attrs" :style-background="bgStyle" :style-title="titleStyle"
+      :style-icon="iconStyle" :style-text="textStyle"/>
   </s-chart>
 </template>
 <script>

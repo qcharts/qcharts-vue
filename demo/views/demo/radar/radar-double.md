@@ -6,9 +6,9 @@
 <template>
   <q-chart :data="radarData" :data-fields="dataFields">
     <q-radar
-      :css-point="false"
-      :css-section="{opacity:0.3}"
-      :css-point="pointStyle"
+      :style-point="false"
+      :style-section="{opacity:0.3}"
+      :style-point="pointStyle"
     />
     <q-legend :attrs="{align: ['center', 'bottom']}" />
   </q-chart>

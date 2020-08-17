@@ -6,12 +6,12 @@
 <template>
   <q-chart :data="lineData" :data-fields="dataFields">
     <q-line />
-    <q-axis :attrs="{orient:'left'}" :css-axis="false" :css-scale="false" />
-    <q-axis :attrs="{orient:'bottom'}" :css-grid="false" />
+    <q-axis :attrs="{orient:'left'}" :style-axis="false" :style-scale="false" />
+    <q-axis :attrs="{orient:'bottom'}" :style-grid="false" />
     <q-legend
       :attrs="{align: ['center', 'bottom']}"
-      :css-icon="{borderRadius:10}"
-      :css-text="{fontSize:12}"
+      :style-icon="{borderRadius:10}"
+      :style-text="{fontSize:12}"
     />
     <q-tooltip />
   </q-chart>

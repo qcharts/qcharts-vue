@@ -4,14 +4,18 @@
 
 ```html
 <template>
-  <q-chart :data="pieData" :data-fields="dataFields">
-    <q-pie :attrs="attrs" :rows="rows" />
-    <q-pie :attrs="attrs2" :rows="rows2" />
+  <q-chart :data="pieData" :data-fields="dataFields" :theme="{colors:colors}">
+    <q-pie :attrs="attrs2" :rows="rows2" :theme="theme2" />
+    <q-pie
+      :attrs="attrs"
+      :rows="rows"
+      :style-guideText="{ bgcolor: 'rgba(255,255,255,0.7)', borderRadius: 2 }"
+      :theme="theme1"
+    />
     <q-legend />
   </q-chart>
 </template>
 <script>
-  const { theme } = qcharts
   const data = [
     { value: 204, name: '图例一' },
     { value: 451, name: '图例二' },
@@ -43,19 +47,22 @@
     '#E37474'
   ]
   const colors = colors1.concat(colors2)
-  theme.set({ colors })
+  const theme1 = { colors: colors1 }
+  const theme2 = { colors: colors2 }
+  // 全局样式
   export default {
     data: function() {
       return {
         pieData: data,
         attrs: { radius: 0.4 },
-        pieColor: colors1,
+        colors,
+        theme1,
+        theme2,
         rows: data.slice(0, 4).map(d => d.name),
         attrs2: {
           innerRadius: 0.5,
           radius: 0.7
         },
-        pieColor2: colors2,
         rows2: data.slice(4).map(d => d.name),
         dataFields: { row: 'name', value: 'value' },
         legendAttrs: { orient: 'vertical', align: ['right', 'center'] },

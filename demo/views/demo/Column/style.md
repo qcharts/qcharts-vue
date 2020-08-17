@@ -6,12 +6,12 @@
 <template>
   <q-chart :data="data" :data-fields="dataFields">
     <q-bar
-      :css-text="text"
-      :css-text:hover="textHover"
-      :css-pillar="pillar"
-      :css-pillar:hover="pillarHover"
-      :css-backgroundpillar="backgroundpillar"
-      :css-backgroundpillar:hover="backgroundpillarHover"
+      :style-text="text"
+      :style-text:hover="textHover"
+      :style-pillar="pillar"
+      :style-pillar:hover="pillarHover"
+      :style-backgroundpillar="backgroundpillar"
+      :style-backgroundpillar:hover="backgroundpillarHover"
     />
     <q-axis :attrs="{orient:'left'}" />
     <q-axis :attrs="{orient:'bottom'}" />
@@ -108,7 +108,7 @@
 ```html
 <template>
   <q-chart :data="data" :data-fields="dataFields">
-    <q-bar :attrs="attrs" :css-text="true" />
+    <q-bar :attrs="attrs" :style-text="true" />
     <q-axis :attrs="{orient:'left'}" />
     <q-axis :attrs="{orient:'bottom'}" />
     <q-legend :attrs="{align: ['center', 'bottom']}" />

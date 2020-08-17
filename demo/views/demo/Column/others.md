@@ -8,8 +8,8 @@
 <template>
   <q-chart :data="data" :data-fields="dataFields">
     <q-bar :attrs="attrs" />
-    <q-axis :attrs="{orient:'left'}" :css-grid="gridStyle" />
-    <q-axis :attrs="{orient:'bottom'}" :css-grid="false" />
+    <q-axis :attrs="{orient:'left'}" :style-grid="gridStyle" />
+    <q-axis :attrs="{orient:'bottom'}" :style-grid="false" />
     <q-legend :attrs="{align: ['center', 'bottom']}" />
     <q-tooltip />
   </q-chart>

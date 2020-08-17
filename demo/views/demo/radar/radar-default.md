@@ -6,8 +6,8 @@
 <template>
   <q-chart :data="radarData" :data-fields="dataFields">
     <q-radar
-      :css-section="{opacity:0.3}"
-      :css-section:hover="{opacity: 0.8,lineWidth:2,strokeColor:'red'}"
+      :style-section="{opacity:0.3}"
+      :style-section:hover="{opacity: 0.8,lineWidth:2,strokeColor:'red'}"
     />
     <q-tooltip />
     <q-legend />
