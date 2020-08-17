@@ -29,10 +29,10 @@ export default function(name) {
         this.plugin = new Plug(this.attrs)
         // this.plugin.color(this.color)
         Object.keys(this.$attrs).forEach(element => {
-          if (element.indexOf('css-') === -1) {
+          if (element.indexOf('style-') === -1) {
             return
           }
-          this.plugin.style(element.substr(4), this.$attrs[element])
+          this.plugin.style(element.substr(6), this.$attrs[element])
         })
         this.$vnode.componentOptions.listeners &&
           Object.keys(this.$vnode.componentOptions.listeners).forEach(
