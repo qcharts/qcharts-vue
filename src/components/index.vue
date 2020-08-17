@@ -51,14 +51,12 @@ export default {
     let datasets = []
     this.visuals.forEach(element => {
       if (element.rows) {
+        let source = dataset.selectRows(element.rows);
+        Object.freeze(source)
+        element.visual.source(source)
         datasets.push(dataset.selectRows(element.rows))
       }
-    })
-    this.visuals.forEach((ele, ind) => {
-      if (ele.rows) {
-        ele.visual.source(datasets[ind], dataFields)
-      }
-      visuals.push(ele.visual)
+       visuals.push(element.visual)
     })
     let plugins = []
     this.plugins.forEach(element => {
