@@ -1,4 +1,4 @@
-## Stacked Area Chart 取件面积图
+## Stacked Area Chart 堆叠面积图
 
 :::demo
 
