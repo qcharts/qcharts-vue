@@ -6,7 +6,6 @@ export default function(name) {
       null
     },
     props: {
-      color: { type: Array, default: () => [] },
       rows: { type: String | Array, default: null },
       attrs: { type: Object, default: () => {} },
       name: { type: String, default: '' }
@@ -20,8 +19,6 @@ export default function(name) {
       if (name) {
         const Shape = qcharts[name]
         this.visual = new Shape(this.attrs)
-        // this.id && this.visual.id=1
-        // this.visual.color(this.color)
         Object.keys(this.$attrs).forEach(element => {
           let curAttr = this.$attrs[element]
           if (element.indexOf('theme') === 0) {

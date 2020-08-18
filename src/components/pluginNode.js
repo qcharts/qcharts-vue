@@ -6,7 +6,6 @@ export default function(name) {
       null
     },
     props: {
-      color: { type: Array, default: () => [] },
       attrs: { type: Object, default: () => {} }
     },
     data: () => {
@@ -27,7 +26,6 @@ export default function(name) {
         const Plug = qcharts[name]
 
         this.plugin = new Plug(this.attrs)
-        // this.plugin.color(this.color)
         Object.keys(this.$attrs).forEach(element => {
           if (element.indexOf('style-') === -1) {
             return
