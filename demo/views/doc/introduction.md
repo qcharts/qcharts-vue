@@ -10,7 +10,7 @@ CatChartsVue 由图表 Chart，图表绘制部分 Visual，图表插件部分 Pl
 
 | 名称   | 说明                                                                                                                                            | 其它 |
 | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| Chart  | 图表组件，申明使用 CatCharts,作为 CatCharts 的绘图容器，包裹其它的组件 `<s-chart></s-chart>`                                                    |      |
+| Chart  | 图表组件，申明使用 QchartsVue,作为 QchartsVue 的绘图容器，包裹其它的组件 `<s-chart></s-chart>`                                                  |      |
 | Visual | 绘图组件，其中包含各种图表，如：`<s-line />` `<s-bar />` `<s-pie />` `<s-radar />` `<s-area />` `<s-column />` `<s-gauge />` `<s-funnel />`等等 |      |
 | Plugin | 绘图插件，其中包含各种插件，如：`<s-tooltip />` `s-legend />` `<s-axis />` 等等                                                                 |      |
 

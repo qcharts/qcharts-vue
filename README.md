@@ -18,7 +18,7 @@ import * as QchartsVue from 'qcharts-vue'
 Vue.use(QchartsVue)
 ```
 
-2.通过 cdn 获取 CatCharts，通过下面的标签引入 CatCharts，因为 CatCharts 依赖 Vue 与 spritejs，所以需要先引入这两个，Demo：<a target="_blank" href="https://github.com/yaotaiyang/qcharts-vue-demo">Quickstart</a>
+2.通过 cdn 获取 QchartsVue，通过下面的标签引入 QchartsVue，因为 QchartsVue 依赖 Vue 与 spritejs，所以需要先引入这两个，Demo：<a target="_blank" href="https://github.com/yaotaiyang/qcharts-vue-demo">Quickstart</a>
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
