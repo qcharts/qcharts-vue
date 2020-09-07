@@ -13,34 +13,22 @@
       <ul>
         <li>
           <a href="./#/demo/line/default">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/base-line.png"
-              alt="基础折线图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/base-line.png" alt="基础折线图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/line/double">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/double-line.png"
-              alt="双折线图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/double-line.png" alt="双折线图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/line/smooth">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/curve-line.png"
-              alt="双曲线"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/curve-line.png" alt="双曲线" />
           </a>
         </li>
         <li>
           <a href="./#/demo/line/multi">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/multi-line.png"
-              alt="多折线"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/multi-line.png" alt="多折线" />
           </a>
         </li>
       </ul>
@@ -48,26 +36,17 @@
       <ul>
         <li>
           <a href="./#/demo/area/default">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/base-area.png"
-              alt="基础折线图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/base-area.png" alt="基础折线图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/area/stack">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/stack-area.png"
-              alt="堆叠面积图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/stack-area.png" alt="堆叠面积图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/area/range">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/range-area.png"
-              alt="区间面积图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/range-area.png" alt="区间面积图" />
           </a>
         </li>
       </ul>
@@ -75,26 +54,17 @@
       <ul>
         <li>
           <a href="./#/demo/column/default">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/base-column.png"
-              alt="基础柱状图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/base-column.png" alt="基础柱状图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/column/group">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/group-column.png"
-              alt="分组柱状图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/group-column.png" alt="分组柱状图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/column/stack">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/stack-column.png"
-              alt="堆叠柱状图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/stack-column.png" alt="堆叠柱状图" />
           </a>
         </li>
       </ul>
@@ -102,26 +72,17 @@
       <ul>
         <li>
           <a href="./#/demo/bar/default">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/bar-chart.png"
-              alt="基础条形图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/bar-chart.png" alt="基础条形图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/bar/group">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/group-bar-chart.png"
-              alt="分组条形图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/group-bar-chart.png" alt="分组条形图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/bar/stack">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/stack-bar-chart.png"
-              alt="堆叠条形图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/stack-bar-chart.png" alt="堆叠条形图" />
           </a>
         </li>
       </ul>
@@ -129,26 +90,17 @@
       <ul>
         <li>
           <a href="./#/demo/pie/default">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/base-pie.png"
-              alt="基础饼图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/base-pie.png" alt="基础饼图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/pie/nest">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/nested-pie.png"
-              alt="嵌套饼图 "
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/nested-pie.png" alt="嵌套饼图 " />
           </a>
         </li>
         <li>
           <a href="./#/demo/pie/dounght">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/dounght.png"
-              alt="环形图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/dounght.png" alt="环形图" />
           </a>
         </li>
       </ul>
@@ -156,18 +108,12 @@
       <ul>
         <li>
           <a href="./#/demo/radar/default">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/base-radar.png"
-              alt="基础雷达图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/base-radar.png" alt="基础雷达图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/radar/radarPoint">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/radar-double.png"
-              alt="双色雷达图 "
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/radar-double.png" alt="双色雷达图 " />
           </a>
         </li>
       </ul>
@@ -175,26 +121,17 @@
       <ul>
         <li>
           <a href="./#/demo/scatter/scatter">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/scatter.png"
-              alt="基础散点图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/scatter.png" alt="基础散点图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/scatter/bubble">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/scatter-bubble.png"
-              alt="气泡图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/scatter-bubble.png" alt="气泡图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/scatter/bubble2">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/scatter-bubble2.png"
-              alt="文字气泡图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/scatter-bubble2.png" alt="文字气泡图" />
           </a>
         </li>
       </ul>
@@ -202,18 +139,12 @@
       <ul>
         <li>
           <a href="./#/demo/funnel/default">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/base-funnel.png"
-              alt="基础漏斗图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/base-funnel.png" alt="基础漏斗图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/funnel/others">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/funnel-other.png"
-              alt="其它漏斗图"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/funnel-other.png" alt="其它漏斗图" />
           </a>
         </li>
       </ul>
@@ -221,45 +152,30 @@
       <ul>
         <li>
           <a href="./#/demo/gauge/default">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/gauge.png"
-              alt="仪表盘"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/gauge.png" alt="仪表盘" />
           </a>
         </li>
         <li>
           <a href="./#/demo/gauge/tick">
-            <img
-              src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/gauge-other.png"
-              alt="其它"
-            />
+            <img src="https://p4.ssl.qhimg.com/d/inn/717a6a22789a/gauge-other.png" alt="其它" />
           </a>
         </li>
       </ul>
-      <h5>极坐标柱状图</h5>
+      <h5>南丁格尔图</h5>
       <ul>
         <li>
           <a href="./#/demo/polarBar/default">
-            <img
-              src="https://p4.ssl.qhimg.com/t01a8ebbbb1be84b2bd.png"
-              alt="基础柱状图"
-            />
+            <img src="https://p4.ssl.qhimg.com/t01a8ebbbb1be84b2bd.png" alt="基础柱状图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/polarBar/group">
-            <img
-              src="https://p5.ssl.qhimg.com/t019b534af0c9649b6b.png"
-              alt="分组柱状图"
-            />
+            <img src="https://p5.ssl.qhimg.com/t019b534af0c9649b6b.png" alt="分组柱状图" />
           </a>
         </li>
         <li>
           <a href="./#/demo/polarBar/stack">
-            <img
-              src="https://p5.ssl.qhimg.com/t016cd0f3d3185f3026.png"
-              alt="堆叠柱状图"
-            />
+            <img src="https://p5.ssl.qhimg.com/t016cd0f3d3185f3026.png" alt="堆叠柱状图" />
           </a>
         </li>
       </ul>

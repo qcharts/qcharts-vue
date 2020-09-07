@@ -17,7 +17,7 @@
         attrs: {
           stack: true,
           radius: 0.8,
-          groupPadAngle: Math.PI * 0.1
+          groupPadAngle: 10
         },
         barData: [
           {

@@ -44,5 +44,11 @@ export default [
     title: '仪表盘',
     path: 'gauge',
     component: () => import('./gauge.md')
+  },
+
+  {
+    title: '南丁格尔图',
+    path: 'polarbar',
+    component: () => import('./polarBar-api.md')
   }
 ]

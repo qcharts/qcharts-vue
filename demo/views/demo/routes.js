@@ -70,7 +70,7 @@ export default [
     children: GaugeRoutes
   },
   {
-    title: '极坐标柱状图',
+    title: '南丁格尔玫瑰图',
     path: 'polarBar',
     component: generateCommonPage('/demo/polarBar/', PolarBarRoutes),
     children: PolarBarRoutes

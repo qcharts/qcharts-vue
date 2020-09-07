@@ -18,15 +18,11 @@ attrs 包含若干布局属性，将这些属性放入 Object 对象传入组件
 
 组件中可以自定义属性的元素如下表：
 
-| 名称                | 描述                      |
-| ------------------- | ------------------------- |
-| css-polygon         | 漏斗区块样式              |
-| css-polygon:hover   | 鼠标 hover 时漏斗区块样式 |
-| css-guideText       | 组件上的文本样式          |
-| css-guideText:hover | 组件上的文本样式          |
-| css-guideLine       | 指示线样式                |
-| css-guideLine:hover | 鼠标 hover 时指示线样式   |
-| css-guideText       | 指示文本文本样式          |
-| css-guideText:hover | 鼠标 hover 时指示文本样式 |
+| 名称              | 描述                      |
+| ----------------- | ------------------------- |
+| css-polygon       | 漏斗区块样式              |
+| css-polygon:hover | 鼠标 hover 时漏斗区块样式 |
+| css-guideText     | 组件上的文本样式          |
+| css-guideLine     | 指示线样式                |
 
 使用方法可在[样式调整 demo](#/demo/funnel/others)中查看

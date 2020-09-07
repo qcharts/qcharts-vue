@@ -17,7 +17,7 @@
         attrs: {
           innerRadius: 0.3,
           radius: 0.7,
-          groupPadAngle: Math.PI * 0.2
+          groupPadAngle: 20
         },
         barData: [
           {
