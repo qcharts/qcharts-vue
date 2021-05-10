@@ -46,27 +46,27 @@ export default {
     Search
   },
 
-  data () {
+  data() {
     return {
       showMenu: false
     }
   },
 
   watch: {
-    $route () {
+    $route() {
       this.showMenu = false
     }
   },
 
   methods: {
-    toggleShowMenu () {
+    toggleShowMenu() {
       this.showMenu = !this.showMenu
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 header {
   position: relative;
   z-index: 100;

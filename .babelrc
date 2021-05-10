@@ -12,6 +12,7 @@
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-export-default-from",
-    "inline-package-json"
+    "inline-package-json",
+    "@babel/plugin-proposal-function-bind"
   ]
 }

@@ -1,11 +1,11 @@
 <template>
   <div class="page">
     <div class="json-editor">
-      <div class="editor" ref="editor">
+      <div ref="editor" class="editor">
         <textarea ref="textarea"></textarea>
       </div>
-      <div class="preview" ref="preview">
-        <div class="demo" ref="demo"></div>
+      <div ref="preview" class="preview">
+        <div ref="demo" class="demo"></div>
       </div>
     </div>
   </div>
@@ -180,7 +180,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .page {
   // padding: 1rem 48px 48px 60px;
 }

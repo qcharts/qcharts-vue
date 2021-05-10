@@ -57,7 +57,7 @@ export default {
     isJSON: false,
     isFullscreen: false
   }),
-  created() {},
+  created() { },
   mounted() {
     this.compile(this.code)
     Split([this.$refs['preview'], this.$refs['editorArea']], {
@@ -107,9 +107,10 @@ export default {
       const pkgs = []
       let scriptContent = 'exports = { default: {} }'
       if (script) {
+        console.log(script)
         try {
           compiled = window.Babel.transform(script.content, {
-            presets: ['es2015', 'es2016', 'es2017', 'stage-0'],
+            presets: ['es2015', 'es2016', 'es2017'],
             plugins: [[getImports, { imports }]]
           }).code
         } catch (e) {
@@ -121,7 +122,7 @@ export default {
       //const heads = this.genHeads()
       const heads = []
       heads.push(
-        `<script src="https://s3.ssl.qhres.com/!f868948f/vue.min.js"><\/script>`
+        `<script src="https://lib.baomitu.com/vue/2.6.12/vue.min.js"><\/script>`
       )
       heads.push('<style>html,body{height:100%;padding:0;margin:0;overflow:hidden;}</style>')
       const scripts = []
@@ -147,8 +148,8 @@ export default {
         ${scriptContent}
         var component = exports.default;
         component.template = component.template || ${JSON.stringify(
-          template.content
-        )}
+        template.content
+      )}
         Vue.use(QchartsVue);
         new Vue(component).$mount('#app')
       <\/script>`)
@@ -162,7 +163,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 h2 {
   margin-bottom: 0;
 }

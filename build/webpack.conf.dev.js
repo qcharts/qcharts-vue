@@ -42,12 +42,6 @@ module.exports = merge(common, {
         include: path.resolve(__dirname, '../src'),
         exclude: /node_modules/
       },
-
-      {
-        test: /\.(s)?css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
-      },
-
       {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'url-loader',
@@ -56,7 +50,14 @@ module.exports = merge(common, {
           name: 'static/img/[name].[ext]?[hash]'
         }
       },
-
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader']
+      },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',
